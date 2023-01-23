@@ -3,6 +3,8 @@ import { renderDogDetail } from '../render-utils.js';
 
 const dogDetailContainer = document.getElementById('dog-detail-container');
 
+//state
+let dogByIdState = [];
 // on load
 window.addEventListener('load', async () => {
     const data = new URLSearchParams(window.location.search);
@@ -13,7 +15,8 @@ window.addEventListener('load', async () => {
     // use the id to fetch the dog
     const response = await getDog(id);
 
+    dogByIdState = response.data;
     // render and append this dog's details to the container
-    const dogDetailEl = renderDogDetail(response);
+    const dogDetailEl = renderDogDetail(dogByIdState);
     dogDetailContainer.append(dogDetailEl);
 });

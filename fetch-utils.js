@@ -15,7 +15,7 @@ export async function getDogs() {
 
 export async function getDog(id) {
     // from the dogs table, select a single dog who has the matching id
-    let query = client.from('dogs').select('*').match({ id: id }).single();
+    let query = client.from('dogs').select('*').eq('id', id).single();
     // and return the response
     const res = await query;
 

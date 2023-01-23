@@ -18,6 +18,7 @@ export function renderDogCard(dog) {
 }
 
 export function renderDogDetail(dog) {
+    console.log('dog', dog);
     const div = document.createElement('div');
     const img = document.createElement('img');
     const descriptionEl = document.createElement('p');
