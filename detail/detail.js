@@ -8,9 +8,9 @@ let dogByIdState = [];
 // on load
 window.addEventListener('load', async () => {
     const data = new URLSearchParams(window.location.search);
-
+    console.log('data', data);
     // get the id from URL
-    const id = data.get('id');
+    const id = data.get('yo');
 
     // use the id to fetch the dog
     const response = await getDog(id);

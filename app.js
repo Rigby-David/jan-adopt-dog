@@ -9,7 +9,6 @@ let dogsStateArray = [];
 // on load
 window.addEventListener('load', async () => {
     const response = await getDogs();
-
     // fetch all dogs
     dogsStateArray = response.data;
     // render and append all dog cards to the container
